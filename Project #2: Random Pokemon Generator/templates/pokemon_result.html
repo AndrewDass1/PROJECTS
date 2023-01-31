@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Favorite Pokemon Generator</title>
+
+    <style> 
+      h1 {
+        color: black; 
+        font-size: 48px;
+        text-align: center;
+      }
+
+      button {
+        text-align: center;
+        display: block;
+        margin:0 auto;
+        font-size: 24px;
+        border: black;
+        background-color: red;
+        color: white;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <h1>
+      <center> The Pokemon you received is {{pokemon_name}}! </center>
+      
+    </h1>
+      <center> <img src={{url_link}}/> </center>
+      
+      <center> <button onclick="window.location.href='pokemon_result.html';">Receive another Pokemon?</button> </center>
+      <br>
+      <center> <button onclick="window.location.href='/';">Go back to home</button> </center>
+    
+  </body>
+
+</html>
