@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+  
+        <style>
+        html {
+            background-color: greenyellow;
+        }
+
+        h1 {
+            color: green;
+            font-family: math;
+            font-size: 48px;
+        }
+
+        h2 {
+            color: green;
+            font-family: math;
+            font-size: 32px;
+        }
+
+        .questions {
+            margin: auto;
+            width: 60%;
+            border: 3px solid darkseagreen;
+            padding: 10px;
+            background-color: white;
+            font-family: math;
+            font-size: 20px;
+        }
+
+
+        button {
+                font-family: math;
+                font-size: 32px;
+                border-top-style: solid;
+                border-top-color: darkseagreen;
+                border-bottom-style: solid;
+                border-bottom-color: darkseagreen;
+                background-color: white;
+                border-left-style: solid;
+                border-left-color: darkseagreen;
+                border-right-style: solid;
+                border-right-color: darkseagreen;
+                color: green;
+            }
+
+        </style>
+
+    <head>
+
+        <center> <h1> Personality Assessment </h1> </center>
+        <center> <h2> Please read and answer all the questions honestly before submitting. Good luck!</h2> </center>
+
+        <body class="questions">
+                    
+                    1. {{question1}}<br>
+                    <input type="radio" name="q1" id="1a"> {{q1_answer1}} <br>
+                    <input type="radio" name="q1" id="1b"> {{q1_answer2}} <br>
+                    <input type="radio" name="q1" id="1c"> {{q1_answer3}} <br>
+                    <input type="radio" name="q1" id="1d"> {{q1_answer4}} <br> 
+                    <br>
+                    
+                    2. {{question2}}<br>
+                    <input type="radio" name="q2" id="2a"> {{q2_answer1}} <br>
+                    <input type="radio" name="q2" id="2b"> {{q2_answer2}} <br>
+                    <input type="radio" name="q2" id="2c"> {{q2_answer3}} <br>
+                    <input type="radio" name="q2" id="2d"> {{q2_answer4}} <br> 
+                    <br>
+                    
+                    3. {{question3}}<br>
+                    <input type="radio" name="q3" id="3a"> {{q3_answer1}} <br>
+                    <input type="radio" name="q3" id="3b"> {{q3_answer2}} <br>
+                    <input type="radio" name="q3" id="3c"> {{q3_answer3}} <br>
+                    <input type="radio" name="q3" id="3d"> {{q3_answer4}} <br> 
+                    <br>
+                    
+                    4. {{question4}} <br>
+                    <input type="radio" name="q4" id="4a"> {{q4_answer1}} <br>
+                    <input type="radio" name="q4" id="4b"> {{q4_answer2}} <br>
+                    <input type="radio" name="q4" id="4c"> {{q4_answer3}} <br>
+                    <input type="radio" name="q4" id="4d"> {{q4_answer4}} <br> 
+                    <br>
+                    
+                    5. {{question5}} <br>
+                    <input type="radio" name="q5" id="5a"> {{q5_answer1}} <br>
+                    <input type="radio" name="q5" id="5b"> {{q5_answer2}} <br>
+                    <input type="radio" name="q5" id="5c"> {{q5_answer3}} <br>
+                    <input type="radio" name="q5" id="5d"> {{q5_answer4}} <br> 
+                    <br>
+                    
+                    6. {{question6}} <br>
+                    <input type="radio" name="q6" id="6a"> {{q6_answer1}} <br>
+                    <input type="radio" name="q6" id="6b"> {{q6_answer2}} <br>
+                    <input type="radio" name="q6" id="6c"> {{q6_answer3}} <br>
+                    <input type="radio" name="q6" id="6d"> {{q6_answer4}} <br> 
+                    <br>
+                    
+                    7. {{question7}} <br>
+                    <input type="radio" name="q7" id="7a"> {{q7_answer1}} <br>
+                    <input type="radio" name="q7" id="7b"> {{q7_answer2}} <br>
+                    <input type="radio" name="q7" id="7c"> {{q7_answer3}} <br>
+                    <input type="radio" name="q7" id="7d"> {{q7_answer4}} <br> 
+                    <br>
+                    
+                    8. {{question8}} <br>
+                    <input type="radio" name="q8" id="8a"> {{q8_answer1}} <br>
+                    <input type="radio" name="q8" id="8b"> {{q8_answer2}} <br>
+                    <input type="radio" name="q8" id="8c"> {{q8_answer3}} <br> 
+                    <input type="radio" name="q8" id="8d"> {{q8_answer4}} <br> 
+                    <br>
+                    
+                    9. {{question9}} <br>
+                    <input type="radio" name="q9" id="9a"> {{q9_answer1}} <br>
+                    <input type="radio" name="q9" id="9b"> {{q9_answer2}} <br>
+                    <input type="radio" name="q9" id="9c"> {{q9_answer3}} <br> 
+                    <input type="radio" name="q9" id="9d"> {{q9_answer4}} <br> 
+                    <br>
+                    
+                    10. {{question10}} <br>
+                    <input type="radio" name="q10" id="10a"> {{q10_answer1}} <br>
+                    <input type="radio" name="q10" id="10b"> {{q10_answer2}} <br>
+                    <input type="radio" name="q10" id="10c"> {{q10_answer3}} <br>
+                    <input type="radio" name="q10" id="10d"> {{q10_answer4}} <br>
+                    <br>
+                    
+
+                    <center> <button onclick="result()" class="button">Submit</button> </center>
+                
+                    <script type="text/javascript" src="{{ url_for('static', filename='calculate_result.js')}}"> </script>
+                    
+                    </body>
+        
+            
+        </body>
+
+</html>
