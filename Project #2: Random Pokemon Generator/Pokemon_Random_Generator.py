@@ -7,7 +7,7 @@ app = Flask(__name__)
 def homepage():
     return render_template('homepage.html')
 
-@app.route("/pokemon_result.html")    
+@app.route("/pokemon_result")    
 def the_pokemon_result():
     url_link, random_pokemon_image, pokemon_name = randomized_pokemon.chosen_pokemon()
     return render_template('pokemon_result.html', url_link=url_link, random_pokemon_image=random_pokemon_image, pokemon_name=pokemon_name)
