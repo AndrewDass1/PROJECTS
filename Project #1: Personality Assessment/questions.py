@@ -8,13 +8,13 @@ def the_test():
     q1_answer3 = "No, but thank you for asking"
     q1_answer4 = "N/A"
 
-    question2 = "How many yours do you spend with your family or friends daily?"
+    question2 = "How many hours do you spend with your family or friends daily?"
     q2_answer1 = "3-5 hours"
     q2_answer2 = "0-2 hours"
     q2_answer3 = "5 or more hours"
     q2_answer4 = "0 hours"
 
-    question3 = "How much people did you talk to today?"
+    question3 = "How many people did you talk to today?"
     q3_answer1 = "0 people"
     q3_answer2 = "5 or more people"
     q3_answer3 = "1-4 people"
@@ -53,7 +53,7 @@ def the_test():
     question9 = "Do you have a job?"
     q9_answer1 = "Yes"
     q9_answer2 = "No"
-    q9_answer3 = "No, but I am currently applying to places receive a job"
+    q9_answer3 = "No, but I am currently applying"
     q9_answer4 = "No, I have no interest"
 
     question10 = "How many hobbies do you have?"
