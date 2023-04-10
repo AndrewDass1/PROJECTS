@@ -3,6 +3,8 @@ import pickle
 
 app = Flask(__name__)
 
+dictionary = {}
+
 @app.route("/")
 def crud_page():
     return render_template("/choose_crud_command.html")
