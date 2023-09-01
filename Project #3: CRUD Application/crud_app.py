@@ -1,9 +1,22 @@
 from flask import Flask, render_template, request
 import pickle
+from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
 dictionary = {}
+
+def clear_dictionary():
+    global dictionary
+    dictionary = {}
+
+    file = open("dictionary_file.pkl", 'wb')
+    pickle.dump(dictionary, file)
+    file.close()
+
+sched = BackgroundScheduler(daemon=True)
+sched.add_job(clear_dictionary,'interval',minutes=5)
+sched.start()
 
 @app.route("/")
 def crud_page():
