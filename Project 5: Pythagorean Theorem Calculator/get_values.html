@@ -1,0 +1,269 @@
+<html>
+    <title>Pythagorean Theorem Calculator</title>
+
+    <head>
+        <style>
+            body {
+                background-color: tan;
+            }
+
+            h1 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 50%;
+            }
+
+            .alpha_letter {
+                position: absolute;
+                margin-left: 105px;
+                margin-top: -60px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .beta_letter {
+                position: absolute;
+                margin-left: -90px;
+                margin-top: -307px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .letter_a_and_side1 {
+                position: absolute;
+                margin-left: -170px;
+                margin-top: -200px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+
+            .letter_b_and_side2 {
+                position: absolute;
+                margin-left: 10px;
+                margin-top: -10px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+            
+            .letter_c_and_hypotenuse {
+                position: absolute;
+                margin-left: 130px;
+                margin-top: -220px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+            #side_1_Header {
+                position: absolute;
+                margin-top: -400px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #the_side1_value {
+                position: absolute;
+                margin-top: -370px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #side_2_Header {
+                position: absolute;
+                margin-top: -290px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #the_side2_value {
+                position: absolute;
+                margin-top: -260px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #hypotenuse_Header {
+                position: absolute;
+                margin-top: -190px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #the_hypotenuse_value {
+                position: absolute;
+                margin-top: -160px;
+                font-size: 24px;
+                color: green;
+            }
+
+            #alpha_angle_Header {
+                position: absolute;
+                margin-top: -400px;
+                right: 0;
+                font-size: 24px;
+                color: green;
+            }
+
+            #angle_alpha {
+                position: absolute;
+                margin-top: -370px;
+                right: 0;
+                font-size: 24px;
+                color: green;
+            }
+
+            #beta_angle_Header {
+                position: absolute;
+                margin-top: -290px;
+                right: 0;
+                font-size: 24px;
+                color: green;
+            }
+
+            #angle_beta {
+                position: absolute;
+                margin-top: -260px;
+                right: 0;
+                font-size: 24px;
+                color: green;
+            }
+            
+
+            #the_form {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #homepage_button {
+                color: white;
+                background-color: gray;
+                padding: 8px 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <h1> Pythagorean Theorem Calculator </h1>
+        </center>
+
+        <center>
+            <div class="container">
+                <img src="right_triangle.png" width="350" height="350">
+                <div class="alpha_letter">α</div>
+                <div class="beta_letter">β</div>
+                <div class="letter_a_and_side1"> a <br> (Side 1) </div>
+                <div class="letter_b_and_side2"> b <br> (Side 2) </div>
+                <div class="letter_c_and_hypotenuse"> c <br> (Hypotenuse) </div>
+            </div>
+        </center>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p id="side_1_Header"> <u>Side 1</u></p> 
+        <p id="the_side1_value"> </p>
+
+        <p id="side_2_Header"> <u>Side 2</u></p> 
+        <p id="the_side2_value"></p>
+
+        <p id="hypotenuse_Header"> <u>Hypotenuse</u></p> 
+        <p id="the_hypotenuse_value"> </p>
+
+        <p id="alpha_angle_Header"> <u>Angle α</u></p> 
+        <p id="angle_alpha" > </p>
+
+        <p id="beta_angle_Header"> <u>Angle β</u></p> 
+        <p id="angle_beta"></p>
+
+        <script>
+            function retrieve_side1_value() {
+                // Retrieve Value
+                var value_of_side1 = localStorage.getItem('side1_value');
+                return value_of_side1;
+            }
+
+            let s1_value = retrieve_side1_value();
+            document.getElementById("the_side1_value").innerHTML = s1_value; 
+
+            function retrieve_side2_value() {
+                // Retrieve Value
+                var value_of_side2 = localStorage.getItem('side2_value');
+                return value_of_side2;
+            }
+
+            let s2_value = retrieve_side2_value();
+            document.getElementById("the_side2_value").innerHTML = s2_value;
+
+            function retrieve_hypotenuse_value() {
+                // Retrieve Value
+                var hypotenuse_side = localStorage.getItem('hypotenuse_value');
+                return hypotenuse_side;
+            }
+
+            let hypotenuse_value = retrieve_hypotenuse_value();
+            document.getElementById("the_hypotenuse_value").innerHTML = hypotenuse_value;
+
+            function retrieve_alpha_angle() {
+                // Retrieve Value
+                var the_alpha_angle = localStorage.getItem('alpha_value');
+                return the_alpha_angle;
+            }
+
+            let the_alpha_value = retrieve_alpha_angle();
+            document.getElementById("angle_alpha").innerHTML = the_alpha_value;
+
+
+            function retrieve_beta_angle() {
+                // Retrieve Value
+                var the_beta_angle = localStorage.getItem('beta_value');
+                return the_beta_angle;
+            }
+
+            let the_beta_value = retrieve_beta_angle();
+            document.getElementById("angle_beta").innerHTML = the_beta_value;
+
+            // Remove items
+            localStorage.removeItem('side1_value');
+            localStorage.removeItem('side2_value');
+            localStorage.removeItem('hypotenuse_value');
+            localStorage.removeItem('alpha_value');
+            localStorage.removeItem('beta_value');
+        </script>
+
+        <br>
+
+        <center>
+            <button onclick="return_to_homepage()" id="homepage_button">Return to Homepage</button>
+        </center>
+    </body>
+
+    <script>
+        function return_to_homepage() {
+            location.replace("homepage.html")
+        }
+    </script>
+
+</html>

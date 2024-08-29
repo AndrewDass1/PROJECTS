@@ -1,0 +1,42 @@
+<html>
+    <title>Pythagorean Theorem Calculator</title>
+
+    <head>
+        <style>
+            body {
+                background-color: tan;
+            }
+
+            h1 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #homepage_button {
+                color: white;
+                background-color: gray;
+                padding: 8px 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <h1> Pythagorean Theorem Calculator </h1>
+            <p> Invalid input. The hypotenuse value cannot be equal to or less than the triangle's two other sides. </p>
+
+            <button onclick="return_to_homepage()" id="homepage_button">Return to Homepage</button>
+        </center>
+
+        <script>
+            function return_to_homepage() {
+                location.replace("homepage.html")
+            }
+        </script>
+    </body>
+</html>

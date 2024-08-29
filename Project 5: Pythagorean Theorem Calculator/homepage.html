@@ -1,0 +1,219 @@
+<html>
+    <title> Pythagorean Theorem Calculator</title>
+
+    <head>
+        <style>
+            body {
+                background-color: tan;
+            }
+
+            h1 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #the_form {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #homepage_button {
+                color: white;
+                background-color: gray;
+                padding: 8px 8px;
+            }
+
+            .container {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 50%;
+            }
+
+            .alpha_letter {
+                position: absolute;
+                margin-left: 105px;
+                margin-top: -60px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .beta_letter {
+                position: absolute;
+                margin-left: -90px;
+                margin-top: -307px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .letter_a_and_side1 {
+                position: absolute;
+                margin-left: -170px;
+                margin-top: -200px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+
+            .letter_b_and_side2 {
+                position: absolute;
+                margin-left: 10px;
+                margin-top: -10px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+            
+            .letter_c_and_hypotenuse {
+                position: absolute;
+                margin-left: 130px;
+                margin-top: -220px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <center> <h1>Welcome to the Pythagorean Theorem Calculator! </h1> </center>
+
+        <center> 
+            <p> The Pythagorean Theorem is when a right triangle's two sides equal the diagonal side by using the format a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>. a and b are the two sides that equal c or the diagonal side. By knowing two values of a right triangle, the missing side can be calculated using this formula.
+        <br>
+        <br>
+                A right triangle can also have one of the three sides be given with one angle. Every triangle has three sides, where each of the lines intersects and makes a point where an angle is created. Since it is a right triangle, one angle is always 90 degrees and the other two angles sum up to be 90 degrees since, every triangle's angles sum to 180 degrees. The trigonometric identities sin, cos, tan or csc, sec or cot can be used to find the missing sides or angles.  
+    
+            </p> </center>
+
+
+ 
+        <center>
+            <div class="container">
+                <img src="right_triangle.png" width="350" height="350">
+                <div class="alpha_letter">α</div>
+                <div class="beta_letter">β</div>
+                <div class="letter_a_and_side1"> a <br> (Side 1) </div>
+                <div class="letter_b_and_side2"> b <br> (Side 2) </div>
+                <div class="letter_c_and_hypotenuse"> c <br> (Hypotenuse) </div>
+            </div>
+        </center>
+
+        <br>
+        <br>
+        <br>
+
+        <center> <h2> Select One of the Options Below: </h2> </center>
+
+        <center> 
+        
+            <form id="the_form" action=".html" method="GET">
+
+                <input type="radio" id="side1_side2" name="which_option" value="Side 1 and Side 2">
+                <label for="side1_side2"> Side 1 and Side 2 </label>
+
+                <br>
+                
+                <input type="radio" id="side1_hypotenuse" name="which_option" value="Side 1 and Hypotenuse">
+                <label for="side1_hypotenuse"> Side 1 and Hypotenuse </label>
+
+                <br>
+
+                <input type="radio" id="side2_hypotenuse" name="which_option" value="Side 2 and Hypotenuse">
+                <label for="side2_hypotenuse"> Side 2 and Hypotenuse </label>
+
+                <br>
+
+                <input type="radio" id="side1_α" name="which_option" value="Side 1 and α">
+                <label for="side1_α"> Side 1 and α </label>
+
+                <br>
+
+                <input type="radio" id="side2_α" name="which_option" value="Side 2 and α">
+                <label for="side2_α"> Side 2 and α </label>
+
+                <br>
+
+                <input type="radio" id="hypotenuse_α" name="which_option" value="Hypotenuse and α">
+                <label for="hypotenuse_α"> Hypotenuse and α </label>
+
+                <br>
+
+                <input type="radio" id="side1_β" name="which_option" value="Side 1 and β">
+                <label for="side1_β"> Side 1 and β </label>
+
+                <br>
+
+                <input type="radio" id="side2_β" name="which_option" value="Side 2 and β">
+                <label for="side2_β"> Side 2 and β </label>
+
+                <br>
+
+                <input type="radio" id="hypotenuse_β" name="which_option" value="Hypotenuse and β">
+                <label for="hypotenuse_β"> Hypotenuse and β </label>
+
+                <br>
+                <br>
+
+                <button onclick="which_page()" id="homepage_button">Next</button>
+
+                
+            </form>
+
+        </center>
+
+        
+    </body>
+
+    <script>
+        function which_page() {
+            if(document.getElementById('side1_side2').checked) {
+                document.getElementById("the_form").action = "enter_side1_side2.html";
+            }
+            else if(document.getElementById('side1_hypotenuse').checked) {
+                document.getElementById("the_form").action = "enter_side1_hypo.html";
+            }
+            else if(document.getElementById('side2_hypotenuse').checked) {
+                document.getElementById("the_form").action = "enter_side2_hypo.html";
+            }
+            else if(document.getElementById('side1_α').checked) {
+                document.getElementById("the_form").action = "enter_side1_α.html";
+            }
+            else if(document.getElementById('side2_α').checked) {
+                document.getElementById("the_form").action = "enter_side2_α.html";
+            }
+            else if(document.getElementById('hypotenuse_α').checked) {
+                document.getElementById("the_form").action = "enter_hypo_α.html";
+            }
+            else if(document.getElementById('side1_β').checked) {
+                document.getElementById('the_form').action = "enter_side1_β.html";
+            }
+            else if(document.getElementById('side2_β').checked) {
+                document.getElementById('the_form').action = "enter_side2_β.html";
+            }
+            else if(document.getElementById('hypotenuse_β').checked) {
+                document.getElementById('the_form').action = "enter_hypo_β.html"
+            }
+        }
+    </script>
+</html>

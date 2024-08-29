@@ -1,0 +1,181 @@
+<html>
+
+    <title> Pythagorean Theorem Calculator </title>
+
+    <head> 
+        <style>
+            body {
+                background-color: tan;
+            }
+
+            h1 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2 {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 50%;
+            }
+
+            .alpha_letter {
+                position: absolute;
+                margin-left: 105px;
+                margin-top: -60px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .beta_letter {
+                position: absolute;
+                margin-left: -90px;
+                margin-top: -307px;
+                width: 50%;
+                font-size: 18px;
+                color: green;
+            }
+
+            .letter_a_and_side1 {
+                position: absolute;
+                margin-left: -170px;
+                margin-top: -200px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+
+            .letter_b_and_side2 {
+                position: absolute;
+                margin-left: 10px;
+                margin-top: -10px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+            
+            .letter_c_and_hypotenuse {
+                position: absolute;
+                margin-left: 130px;
+                margin-top: -220px;
+                width: 50%;
+                font-size: 24px;
+                color: green;
+            }
+
+            #the_form {
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #homepage_button {
+                color: white;
+                background-color: gray;
+                padding: 8px 8px;
+            }
+
+            #calculate_button {
+                color: white;
+                background-color: gray;
+                padding: 8px 8px;
+            }
+
+
+        </style>
+    </head>
+
+    <body> 
+        <center> <h1>Pythagorean Theorem Calculator</h1> </center>
+
+        <center>
+            <div class="container">
+                <img src="right_triangle.png" width="350" height="350">
+                <div class="alpha_letter">α</div>
+                <div class="beta_letter">β</div>
+                <div class="letter_a_and_side1"> a <br> (Side 1) </div>
+                <div class="letter_b_and_side2"> b <br> (Side 2) </div>
+                <div class="letter_c_and_hypotenuse"> c <br> (Hypotenuse) </div>
+            </div>
+        </center>
+
+        <br>
+        <br>
+        <br>
+
+        <center> <h2>Enter the Side and β Values below:</h2> </center>
+        
+        <center>
+            <form id="the_form" action="" method="GET">
+                <label for="side"> Side 1: </label>
+                <input type="number" name="first_box" min="1"> 
+
+                <br>
+                <br>
+
+                <label for="α_angle"> β: </label>
+                <input type="number" name="second_box" min="1" max="89">
+
+                <br>
+                <br>
+                
+                <button onclick="next_page()" id="calculate_button">Calculate</button>
+
+                <br>
+                <br>
+            </form>
+
+            <button onclick="return_to_homepage()" id="homepage_button">Return to Homepage</button>
+        </center>
+
+        <script>
+            function next_page() 
+            {
+                var tri_side1 = document.forms["the_form"]["first_box"].value;
+                var angle_beta = document.forms["the_form"]["second_box"].value;
+
+                var angle_alpha = 90 - angle_beta;
+
+                angle_beta_radians = angle_beta * Math.PI / 180;
+
+                if ( tri_side1 == "" || tri_side1 == null || angle_beta == "" || angle_beta == null) 
+                {
+                    alert("There are empty text boxes. Please submit two numbers.")
+                }
+                else 
+                    {
+                        var tri_side2 = Math.tan(angle_beta_radians) * tri_side1;
+
+                        var hypotenuse = Math.sqrt(tri_side1 * tri_side1 + tri_side2 * tri_side2);
+
+                        document.getElementById("the_form").action = "get_values.html";
+
+                        localStorage.setItem('side1_value', tri_side1);
+                        localStorage.setItem('side2_value', tri_side2);
+                        localStorage.setItem('hypotenuse_value', hypotenuse);
+                        localStorage.setItem('alpha_value', angle_alpha);
+                        localStorage.setItem('beta_value', angle_beta);
+                    }
+            }
+        </script>
+
+        <script>
+            function return_to_homepage() {
+                location.replace("homepage.html")
+            }
+        </script>
+
+
+    </body>
+
+</html>
